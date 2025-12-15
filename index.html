@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WHYNOT — Monochrome UI Concept</title>
+
+  <!-- MAIN STYLES -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <a
+  href="https://x.com/ТВОЙ_АККАУНТ"
+  target="_blank"
+  rel="noopener"
+  class="x-link"
+  aria-label="X (Twitter)"
+>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+</svg>
+</a>
+
+  <!-- BACKGROUND QUESTIONS -->
+  <div class="question-layer">
+    <!-- FAR -->
+    <span class="q q-far q1">?</span>
+    <span class="q q-far q2">?</span>
+  
+    <!-- MID -->
+    <span class="q q-mid q3">?</span>
+    <span class="q q-mid q4">?</span>
+    <span class="q q-mid q5">?</span>
+  
+    <!-- NEAR -->
+    <span class="q q-near q6">?</span>
+    <span class="q q-near q7">?</span>
+    <span class="q q-near q8">?</span>
+  </div>
+  
+
+  <!-- CONTENT -->
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="kicker">MEME COIN</div>
+      <h1 class="glitch" data-text="WHYNOT">WHYNOT</h1>
+
+      <p class="lead">
+        WHYNOT — экспериментальный мем-токен, созданный ради фана,
+        хаоса и интернет-культуры. Никаких обещаний. WHY NOT?
+      </p>
+
+      <div class="cta">
+        <a href="#details" class="btn">Узнать подробнее</a>
+
+        <a href="https://orb.helius.dev/address/3bCd8TV5J8zci4bGspu7Bniz5vNP5zgUqUGhSAm9gHqi/metadata" target="_blank" rel="noopener">
+          <button class="btn invert">Купить токен</button>
+        </a>
+        
+      </div>
+    </section>
+          
+    <section class="graph-block reveal" id="why-graph">
+
+
+      <svg class="why-graph" viewBox="0 0 1000 300" preserveAspectRatio="none">
+    
+        <!-- ЛОЖНЫЙ ПРОБОЙ -->
+        <polyline
+          id="line-fake"
+          class="chart-line fake"
+          points="
+            0,180
+            100,160
+            200,190
+            300,170
+            400,210
+            450,260
+            480,240
+          "
+        />
+    
+        <!-- ВЕРТИКАЛЬНЫЙ ПАМП -->
+        <polyline
+          id="line-pump"
+          class="chart-line pump"
+          points="
+            480,240
+            490,120
+            500,130
+          "
+        />
+    
+        <!-- РОСТ -->
+        <polyline
+          id="line-up"
+          class="chart-line up"
+          points="
+            500,130
+            560,150
+            620,110
+            680,130
+            740,90
+            800,110
+            860,70
+            920,90
+            1000,50
+          "
+        />
+    
+        <!-- FLASH -->
+        <rect id="flash" x="0" y="0" width="1000" height="300"/>
+    
+        <!-- ARROW DEFS -->
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10"
+                  refX="6" refY="3"
+                  orient="auto"
+                  markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="white"/>
+          </marker>
+        </defs>
+    
+        <!-- LEFT ARROW -->
+        <line
+          class="chart-arrow left"
+          x1="240" y1="210"
+          x2="300" y2="170"
+          marker-end="url(#arrow)"
+        />
+        <text class="chart-label left" x="210" y="235">
+          Have you wondered why not?
+        </text>
+    
+        <!-- RIGHT ARROW (РАЗВЕРНУТА) -->
+        <line
+        class="chart-arrow right"
+        x1="700" y1="80"
+        x2="650" y2="120"
+        marker-end="url(#arrow)"
+      />
+      
+        <text class="chart-label right" x="720" y="70">
+          You've got it all figured out now
+        </text>
+    
+      </svg>
+    
+    </section>
+    
+    <!-- TIMELINE -->
+    <section class="timeline reveal" id="details">
+
+      <div class="card left flip-card">
+        <div class="flip-inner">
+      
+          <!-- FRONT -->
+          <div class="flip-front">
+            <div class="tag">WHAT IS WHYNOT</div>
+            <h3>Мем без правил</h3>
+            <p>
+              Почему бы не выйти за рамки привычного? Жизнь слишком коротка, чтобы всё время выбирать безопасные варианты и откладывать смелые решения «на потом». Риск — это не ошибка, это способ почувствовать, что ты действительно живёшь. WHYNOT — про этот внутренний импульс сказать «да», когда разум сомневается. Про момент, когда ты выбираешь не логику, а чувство. Потому что иногда именно самые странные решения меняют всё.
+            </p>
+          </div>
+      
+          <!-- BACK -->
+          <div class="flip-back">
+            WHYNOT
+          </div>
+      
+        </div>
+      </div>
+
+      <div class="timeline-label">WHYNOT</div>
+      <div class="card right flip-card">
+        <div class="flip-inner">
+      
+          <div class="flip-front">
+            <div class="tag">PHILOSOPHY</div>
+            <h3>Почему бы и нет?</h3>
+            <p>
+              Здесь нет правильного времени входа, есть только решение: почему бы и нет? Ты покупаешь не актив - ты становишься частью идеи, где ценность рождается из внимания, иронии и комьюнити. Такие вещи не объясняют логикой, их чувствуют. Иногда самые странные решения оказываются самыми запоминающимися. WHYNOT.
+            </p>
+          </div>
+      
+          <div class="flip-back">
+            WHYNOT
+          </div>
+      
+        </div>
+      </div>
+      <section class="why-block reveal">
+        <div class="why-inner">
+      
+          <div class="why-big">WHY</div>
+      
+          <div class="why-not">
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+            <span>not</span>
+          </div>
+      
+        </div>
+      </section>
+
+  </div>
+  <section class="dex-block reveal">
+    <div class="dex-header">
+      <span class="dex-tag">LIVE CHART</span>
+      <span class="dex-hint">market reality</span>
+    </div>
+  
+    <div class="dex-frame">
+      <iframe
+        src="https://dexscreener.com/solana/be2zgtcwpbpkvr21kmcnxsnjjgzvdxdmz8jqh3c2ngwg?embed=1&theme=dark&trades=0&info=0"
+        title="Dexscreener Chart"
+        loading="lazy"
+      ></iframe>
+    </div>
+  
+    <div class="dex-footer">
+      This is not financial advice. Just a question.
+    </div>
+  </section>
+      <!-- FOOTER -->
+      <footer class="reveal">
+        © WHYNOT — Not just a meme - a principle of life
+      </footer>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+      const reveals = document.querySelectorAll('.reveal');
+    
+      const revealOnScroll = () => {
+        const trigger = window.innerHeight * 0.85;
+        reveals.forEach(el => {
+          if (el.getBoundingClientRect().top < trigger) {
+            el.classList.add('visible');
+          }
+        });
+      };
+    
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+    
+      // FLIP CARDS
+      document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
+      });
+    
+    });
+
+    document.addEventListener("mousemove", e => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 20;
+  const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+  document.querySelectorAll('.q-far').forEach(el=>{
+    el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+  });
+  document.querySelectorAll('.q-mid').forEach(el=>{
+    el.style.transform = `translate(${x * 0.6}px, ${y * 0.6}px)`;
+  });
+  document.querySelectorAll('.q-near').forEach(el=>{
+    el.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+  const graph = document.getElementById('why-graph');
+
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        setTimeout(()=>{
+          graph.classList.add('glitch');
+        },1300);
+      }
+    });
+  },{ threshold:.6 });
+
+  observer.observe(graph);
+
+});
+document.addEventListener('DOMContentLoaded', () => {
+
+const graphBlock = document.querySelector('.graph-block');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    // FLASH + SHAKE
+    setTimeout(() => {
+      graphBlock.classList.add('flash');
+    }, 1500);
+
+    // ARROWS + LABELS
+    setTimeout(() => {
+      graphBlock.classList.add('arrows');
+    }, 1900);
+
+    observer.disconnect();
+  });
+}, { threshold: 0.6 });
+
+observer.observe(graphBlock);
+
+});
+
+    </script>
+    
+
+</body>
+</html>

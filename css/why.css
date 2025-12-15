@@ -1,0 +1,75 @@
+/* ===== WHY BLOCK ===== */
+
+.why-block{
+  position:relative;
+  min-height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+/* subtle diagonal noise */
+.why-block::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,0.015),
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+  pointer-events:none;
+}
+
+.why-inner{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+/* BIG WHY */
+.why-big{
+  font-size:clamp(72px, 20vw, 220px);
+  font-weight:700;
+  letter-spacing:0.08em;
+  line-height:1;
+  margin-bottom:12px;
+  animation: whyBreath 6s ease-in-out infinite;
+}
+@keyframes whyBreath{
+  0%,100%{
+    transform: scale(1);
+    opacity:1;
+  }
+  50%{
+    transform: scale(1.02);
+    opacity:.9;
+  }
+}
+
+
+.why-not span{
+  font-size:clamp(14px, 3vw, 22px);
+  letter-spacing:0.12em;
+  color:rgba(255,255,255,0.85);
+  opacity:0;
+  animation: notAppear 1.6s steps(1) infinite;
+}
+
+/* stagger animation */
+.why-not span:nth-child(1){ animation-delay:0s; }
+.why-not span:nth-child(2){ animation-delay:.12s; }
+.why-not span:nth-child(3){ animation-delay:.24s; }
+.why-not span:nth-child(4){ animation-delay:.36s; }
+.why-not span:nth-child(5){ animation-delay:.48s; }
+.why-not span:nth-child(6){ animation-delay:.6s; }
+.why-not span:nth-child(7){ animation-delay:.72s; }
+.why-not span:nth-child(8){ animation-delay:.84s; }
+.why-not span:nth-child(9){ animation-delay:.96s; }
+.why-not span:nth-child(10){ animation-delay:1.08s; }
+.why-not span:nth-child(11){ animation-delay:1.2s; }
+.why-not span:nth-child(12){ animation-delay:1.32s; }

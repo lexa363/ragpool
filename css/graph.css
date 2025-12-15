@@ -1,0 +1,152 @@
+/* ===============================
+   GRAPH BLOCK
+================================ */
+
+.graph-block{
+    position:relative;
+    height:260px;
+    margin:120px 0;
+    overflow:hidden;
+  }
+  
+  /* SVG */
+  .why-graph{
+    width:100%;
+    height:100%;
+  }
+  
+  /* ===============================
+     LINES (BASE)
+  ================================ */
+  
+  .chart-line{
+    fill:none;
+    stroke-width:2;
+    stroke-linejoin:miter;
+    stroke-linecap:square;
+    stroke-dasharray:1400;
+    stroke-dashoffset:1400;
+  }
+  
+  /* 🔻 ЛОЖНЫЙ ПРОБОЙ */
+  .chart-line.fake{
+    stroke:#ff3b3b;
+    animation: draw 1.4s ease-out forwards;
+  }
+  
+  /* 🚀 ВЕРТИКАЛЬНЫЙ ПАМП */
+  .chart-line.pump{
+    stroke:#ffffff;
+    animation: draw 0.4s ease-out forwards;
+    animation-delay:1.4s;
+  }
+  
+  /* 📈 РОСТ */
+  .chart-line.up{
+    stroke:#ffffff;
+    animation: draw 1.6s ease-out forwards;
+    animation-delay:1.8s;
+  }
+  
+  /* ===============================
+     FLASH (ДИАГОНАЛЬНЫЙ)
+  ================================ */
+  
+  #flash{
+    fill:white;
+    opacity:0;
+    transform:skewX(-18deg) translateX(-300px);
+    animation: flash 0.18s linear;
+    animation-delay:1.55s;
+  }
+  
+  /* ===============================
+     ARROWS
+  ================================ */
+  
+  .chart-arrow{
+    stroke:#ffffff;
+    stroke-width:2;
+    opacity:0;
+    stroke-dasharray:60;
+    stroke-dashoffset:60;
+  }
+  
+  /* появляются ТОЛЬКО после пампа */
+  .graph-block.arrows .chart-arrow{
+    animation: arrowIn .6s ease forwards;
+  }
+  
+  .chart-arrow.left{ animation-delay:0s; }
+  .chart-arrow.right{ animation-delay:.3s; }
+  
+  /* ===============================
+     LABELS
+  ================================ */
+  
+  .chart-label{
+    fill:#ffffff;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size:13px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    opacity:0;
+  }
+  
+  
+  
+  .graph-block.arrows .chart-label{
+    animation: labelIn .6s ease forwards;
+  }
+  
+  .chart-label.left{ animation-delay:.1s; }
+  .chart-label.right{ animation-delay:.4s; }
+  
+  /* ===============================
+     GLITCH / SHAKE
+  ================================ */
+  
+  .graph-block.flash{
+    animation: shake .18s steps(2) 3;
+  }
+  
+  /* ===============================
+     KEYFRAMES
+  ================================ */
+  
+  @keyframes draw{
+    to{ stroke-dashoffset:0; }
+  }
+  
+  @keyframes flash{
+    0%{ opacity:0 }
+    40%{ opacity:.35 }
+    100%{ opacity:0 }
+  }
+  
+  @keyframes arrowIn{
+    to{
+      opacity:1;
+      stroke-dashoffset:0;
+    }
+  }
+  
+  @keyframes labelIn{
+    from{
+      opacity:0;
+      transform:translateY(6px);
+    }
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+  
+  @keyframes shake{
+    0%{ transform:translate(0) }
+    25%{ transform:translate(-2px,1px) }
+    50%{ transform:translate(2px,-1px) }
+    75%{ transform:translate(-1px,2px) }
+    100%{ transform:translate(0) }
+  }
+  

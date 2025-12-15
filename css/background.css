@@ -1,0 +1,29 @@
+.question-layer{
+    position:fixed;
+    inset:0;
+    z-index:15;
+    pointer-events:none;
+  }
+  
+  .q{
+    position:absolute;
+    font-weight:600;
+    color:rgba(255,255,255,0.35);
+    mix-blend-mode:screen;
+    text-shadow:0 0 12px rgba(255,255,255,0.15);
+  }
+  
+  .q-far{ font-size:140px; opacity:.08; filter:blur(1.6px); }
+  .q-mid{ font-size:36px;  opacity:.18; filter:blur(.6px); }
+  .q-near{ font-size:20px; opacity:.35; }
+  
+  .q1{ top:6%; left:8%; }
+  .q2{ top:14%; right:18%; }
+  .q3{ top:24%; left:34%; }
+  .q4{ top:32%; right:42%; }
+  .q5{ top:44%; left:12%; }
+  .q6{ top:52%; left:48%; }
+  .q7{ top:60%; right:16%; }
+  .q8{ bottom:26%; left:26%; }
+  
+  

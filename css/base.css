@@ -1,0 +1,55 @@
+
+:root{
+    --bg:#050505;
+    --panel:#0d0d0d;
+    --muted:#bfbfbf;
+    --text:#ffffff;
+    --border: rgba(255,255,255,0.08);
+    --radius:16px;
+  }
+  
+  *{ box-sizing:border-box; }
+  
+  html,body{
+    margin:0;
+    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+  }
+  html{
+    scroll-behavior:smooth;
+  }
+  
+  
+  
+/* ===== GLITCH ===== */
+
+.glitch{
+  position:relative;
+}
+
+.glitch::before,
+.glitch::after{
+  content:attr(data-text);
+  position:absolute;
+  inset:0;
+}
+
+.glitch::before{
+  transform:translate(-2px,0);
+  color:#aaa;
+  animation: glitch 2.5s infinite alternate-reverse;
+}
+
+.glitch::after{
+  transform:translate(2px,0);
+  color:#666;
+  animation: glitch 3s infinite alternate;
+}
+
+@keyframes glitch{
+  0%{ clip-path: inset(0 0 90% 0); }
+  50%{ clip-path: inset(40% 0 30% 0); }
+  100%{ clip-path: inset(0 0 0 0); }
+}

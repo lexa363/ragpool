@@ -1,0 +1,140 @@
+/* =========================================================
+   DEXSCREENER BLOCK
+========================================================= */
+
+.dex-block{
+    max-width:1000px;
+    margin:0px auto;
+    padding:0 24px;
+    position:relative;
+  }
+  
+  /* ---------------------------------------------------------
+     HEADER
+  --------------------------------------------------------- */
+  
+  .dex-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:14px;
+  }
+  
+  .dex-tag{
+    font-size:12px;
+    letter-spacing:.16em;
+    padding:6px 12px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    color:var(--muted);
+    font-family:ui-monospace, monospace;
+    text-transform:uppercase;
+  }
+  
+  .dex-hint{
+    font-size:12px;
+    color:rgba(255,255,255,.35);
+    font-style:italic;
+    white-space:nowrap;
+  }
+  
+  /* ---------------------------------------------------------
+     FRAME
+  --------------------------------------------------------- */
+  
+  .dex-frame{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:
+      0 30px 80px rgba(0,0,0,.85),
+      inset 0 0 0 1px rgba(255,255,255,.03);
+  }
+  
+  /* noise / texture */
+  .dex-frame::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255,255,255,0.012),
+        rgba(255,255,255,0.012) 1px,
+        transparent 1px,
+        transparent 7px
+      );
+    pointer-events:none;
+    mix-blend-mode:overlay;
+    opacity:.6;
+  }
+  
+  /* ---------------------------------------------------------
+     IFRAME
+  --------------------------------------------------------- */
+  
+  .dex-frame iframe{
+    width:100%;
+    height:520px;
+    border:0;
+    display:block;
+  
+    filter:
+      contrast(1.08)
+      brightness(0.95);
+  }
+  /* subtle top/bottom fade */
+  .dex-frame::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(to bottom,
+        rgba(0,0,0,.35),
+        transparent 20%,
+        transparent 80%,
+        rgba(0,0,0,.35)
+      );
+    pointer-events:none;
+  }
+  
+  /* ---------------------------------------------------------
+     FOOTER
+  --------------------------------------------------------- */
+  
+  .dex-footer{
+    margin-top:14px;
+    text-align:center;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  
+  /* ---------------------------------------------------------
+     MOBILE
+  --------------------------------------------------------- */
+  
+  @media (max-width: 900px){
+    .dex-block{
+      margin:120px auto;
+    }
+  
+    .dex-frame iframe{
+      height:420px;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .dex-frame iframe{
+      height:340px;
+    }
+  
+    .dex-header{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:6px;
+    }
+  }
+  

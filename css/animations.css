@@ -1,0 +1,47 @@
+@keyframes notAppear{
+    0%{opacity:0}
+    10%{opacity:1}
+    80%{opacity:1}
+    100%{opacity:0}
+  }
+  
+  @keyframes glitch{
+    0%{clip-path:inset(0 0 90% 0)}
+    50%{clip-path:inset(40% 0 30% 0)}
+    100%{clip-path:inset(0 0 0 0)}
+  }
+  
+  /* ===== SCROLL APPEAR ===== */
+
+.reveal{
+  opacity:0;
+  transform:translateY(32px) scale(.98);
+  filter:blur(6px);
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.2,.6,.2,1),
+    filter .9s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  filter:blur(0);
+}
+/* === HERO === */
+.hero h1{
+  animation: heroTitle 1.2s ease forwards;
+}
+
+@keyframes heroTitle{
+  0%{
+    opacity:0;
+    transform:scale(1.1);
+    filter:blur(12px);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1);
+    filter:blur(0);
+  }
+}
