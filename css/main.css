@@ -29,3 +29,104 @@
 @media (max-width:480px){
   h1{font-size:28px}
 }
+
+/* === CRYPTO ENHANCEMENT FINAL === */
+
+.onchain{
+  max-width:1000px;
+  margin:120px auto;
+  padding:0 24px;
+}
+
+.onchain-box{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:28px;
+  font-family:ui-monospace,monospace;
+  background:#0a0a0a;
+}
+
+.onchain-title{
+  letter-spacing:.18em;
+  font-size:13px;
+  margin-bottom:22px;
+  opacity:.6;
+}
+
+.onchain-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+}
+
+.onchain-grid div{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px dashed rgba(255,255,255,.08);
+  padding-bottom:6px;
+}
+
+.onchain-grid span{
+  opacity:.4;
+}
+
+.token-flow{
+  margin:120px auto;
+  text-align:center;
+  font-family:ui-monospace,monospace;
+}
+
+.flow-line{
+  display:inline-flex;
+  gap:14px;
+  letter-spacing:.18em;
+  opacity:.7;
+}
+
+.flow-line i{
+  opacity:.3;
+}
+
+.principles{
+  max-width:800px;
+  margin:140px auto 180px;
+  text-align:center;
+  font-family:ui-monospace,monospace;
+}
+
+.principles h3{
+  letter-spacing:.3em;
+  opacity:.4;
+  margin-bottom:24px;
+}
+
+.principles ul{
+  list-style:none;
+  padding:0;
+}
+
+.principles li{
+  margin:10px 0;
+  opacity:.7;
+}
+
+body::after{
+  content:"BLOCK CONFIRMED   TX FINALIZED   PROGRAM EXECUTED";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  font-family:ui-monospace,monospace;
+  font-size:11px;
+  letter-spacing:.4em;
+  color:rgba(255,255,255,0.035);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform:rotate(-15deg);
+  z-index:1;
+}
+
+@media(max-width:768px){
+  body::after{display:none}
+  .onchain,.token-flow,.principles{margin:80px auto}
+}
