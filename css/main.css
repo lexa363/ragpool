@@ -8,3 +8,24 @@
 @import "./icon.css";
 @import "./dexscreen.css";
 
+
+/* =========================================================
+   RESPONSIVE — MOBILE / TABLET / DESKTOP
+========================================================= */
+
+@media (max-width:1024px){
+  .card.left,.card.right{margin:0 auto}
+  .timeline-label{writing-mode:horizontal-tb}
+}
+
+@media (max-width:768px){
+  .cta{flex-direction:column}
+  .btn{margin-top: 25px;}
+  .btn{width:52%}
+  .graph-block{height:200px}
+  .q-far{display:none}
+}
+
+@media (max-width:480px){
+  h1{font-size:28px}
+}
